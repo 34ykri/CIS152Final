@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\thefo\\Source\\Repos\\CIS152Final\\DataStructuresFinalProjectWebAppVang.csproj": {}
+    "C:\\Users\\thefo\\Source\\Repos\\DataStructureFinal\\DataStructuresFinalProjectWebAppVang.csproj": {}
   },
   "projects": {
-    "C:\\Users\\thefo\\Source\\Repos\\CIS152Final\\DataStructuresFinalProjectWebAppVang.csproj": {
+    "C:\\Users\\thefo\\Source\\Repos\\DataStructureFinal\\DataStructuresFinalProjectWebAppVang.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\thefo\\Source\\Repos\\CIS152Final\\DataStructuresFinalProjectWebAppVang.csproj",
+        "projectUniqueName": "C:\\Users\\thefo\\Source\\Repos\\DataStructureFinal\\DataStructuresFinalProjectWebAppVang.csproj",
         "projectName": "DataStructuresFinalProjectWebAppVang",
-        "projectPath": "C:\\Users\\thefo\\Source\\Repos\\CIS152Final\\DataStructuresFinalProjectWebAppVang.csproj",
+        "projectPath": "C:\\Users\\thefo\\Source\\Repos\\DataStructureFinal\\DataStructuresFinalProjectWebAppVang.csproj",
         "packagesPath": "C:\\Users\\thefo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\thefo\\Source\\Repos\\CIS152Final\\obj\\",
+        "outputPath": "C:\\Users\\thefo\\Source\\Repos\\DataStructureFinal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

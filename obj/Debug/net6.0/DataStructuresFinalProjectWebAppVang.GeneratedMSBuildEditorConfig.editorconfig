@@ -8,33 +8,33 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = DataStructuresFinalProjectWebAppVang
 build_property.RootNamespace = DataStructuresFinalProjectWebAppVang
-build_property.ProjectDir = C:\Users\thefo\Source\Repos\CIS152Final\
+build_property.ProjectDir = C:\Users\thefo\Source\Repos\DataStructureFinal\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\thefo\Source\Repos\CIS152Final
+build_property.MSBuildProjectDirectory = C:\Users\thefo\Source\Repos\DataStructureFinal
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/thefo/Source/Repos/CIS152Final/Views/Home/Index.cshtml]
+[C:/Users/thefo/Source/Repos/DataStructureFinal/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thefo/Source/Repos/CIS152Final/Views/Queue/Index.cshtml]
+[C:/Users/thefo/Source/Repos/DataStructureFinal/Views/Queue/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVldWVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thefo/Source/Repos/CIS152Final/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/thefo/Source/Repos/DataStructureFinal/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thefo/Source/Repos/CIS152Final/Views/_ViewImports.cshtml]
+[C:/Users/thefo/Source/Repos/DataStructureFinal/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thefo/Source/Repos/CIS152Final/Views/_ViewStart.cshtml]
+[C:/Users/thefo/Source/Repos/DataStructureFinal/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thefo/Source/Repos/CIS152Final/Views/Shared/_Layout.cshtml]
+[C:/Users/thefo/Source/Repos/DataStructureFinal/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-a313mrpc5y
