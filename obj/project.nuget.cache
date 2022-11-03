@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CR+4EPPLHH4KXxzt6z8K0ApIjjxa3QrNTLgvxF1KyGdMpTlHL4AhgeIad2KPhgOaWAQEkEzM8ufPYlwOYU0RBA==",
+  "dgSpecHash": "HPXkjcgk+JM1ffMjvrAG+l2LlquAwXlAavi/0qQgdb0Ee3IB8nHs2r5oxky2q8xdrNLRPW8/SI+ki/iRik++TQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\thefo\\Source\\Repos\\CIS152Final\\DataStructuresFinalProjectWebAppVang.csproj",
+  "projectFilePath": "C:\\Users\\thefo\\Source\\Repos\\DataStructureFinal\\DataStructuresFinalProjectWebAppVang.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\thefo\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.10\\microsoft.entityframeworkcore.6.0.10.nupkg.sha512",
     "C:\\Users\\thefo\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.10\\microsoft.entityframeworkcore.abstractions.6.0.10.nupkg.sha512",
