@@ -1,45 +1,87 @@
 ﻿using DataStructuresFinalProjectWebAppVang.Controllers;
-using DataStructuresFinalProjectWebAppVang.unused;
+using DataStructuresFinalProjectWebAppVang.Models;
+
 using Microsoft.AspNetCore.Mvc;
 namespace DataStructuresFinalProjectWebAppVang.Controllers
 {
     public class HomeController : Controller
     {
+        LinkedList<Character> characterList = new LinkedList<Character>();
         public IActionResult Index()
         {
             var model = new LinkedList<Character>();
-            model.AddLast(new Character { Name = "Albedo", Vision = "Geo", Weapon = "Sword", LastSeen = "Avaliable Now", Region = "Mondstadt", ImageName = "albedo.png" });
-            model.AddLast(new Character { Name = "Aloy", Vision = "Cryo", Weapon = "Bow", LastSeen = "Gift from Developer", Region = "Not from Genshin", ImageName = "aloy.png" });
-            model.AddLast(new Character { Name = "Ayaka", Vision = "Cryo", Weapon = "Sword", LastSeen = "Update 2.6 Event Banner", Region = "Inazuma", ImageName = "ayaka.png" });
-            model.AddLast(new Character { Name = "Ayato", Vision = "Hydro", Weapon = "Sword", LastSeen = "Update 2.6 Event Banner", Region = "Inazuma", ImageName = "ayato.png" });
-            model.AddLast(new Character { Name = "Cyno", Vision = "Electro", Weapon = "Polearm", LastSeen = "Update 3.1 Event Banner", Region = "Sumeru", ImageName = "cyno.png" });
-            model.AddLast(new Character { Name = "Diluc", Vision = "Pyro", Weapon = "Claymore", LastSeen = "Standard Banner", Region = "Mondstadt", ImageName = "diluc.png" });
-            model.AddLast(new Character { Name = "Eula", Vision = "Cryo", Weapon = "Claymore", LastSeen = "Update 2.3 Event Banner", Region = "Mondstadt", ImageName = "eula.png" });
-            model.AddLast(new Character { Name = "Ganyu", Vision = "Cryo", Weapon = "Bow", LastSeen = "Update 3.0 Event Banner", Region = "Liyue", ImageName = "ganyu.png" });
-            model.AddLast(new Character { Name = "Hu Tao", Vision = "Pyro", Weapon = "Polearm", LastSeen = "Update 2.2 Event Banner", Region = "Liyue", ImageName = "hutao.png" });
-            model.AddLast(new Character { Name = "Itto", Vision = "Geo", Weapon = "Claymore", LastSeen = "Update 2.7 Event Banner", Region = "Inazuma", ImageName = "itto.png" });
-            model.AddLast(new Character { Name = "Jean", Vision = "Anemo", Weapon = "Sword", LastSeen = "Standard Banner", Region = "Mondstadt", ImageName = "jean.png" });
-            model.AddLast(new Character { Name = "Kazuha", Vision = "Anemo", Weapon = "Sword", LastSeen = "Update 2.8 Event Banner", Region = "Inazuma", ImageName = "kazuha.png" });
-            model.AddLast(new Character { Name = "Keqing", Vision = "Electro", Weapon = "Sword", LastSeen = "Standard Banner", Region = "Liyue", ImageName = "keqing.png" });
-            model.AddLast(new Character { Name = "Klee", Vision = "Pyro", Weapon = "Catalyst", LastSeen = "Update 2.8 Event Banner", Region = "Mondstadt", ImageName = "klee.png" });
-            model.AddLast(new Character { Name = "Kokomi", Vision = "Hydro", Weapon = "Catalyst", LastSeen = "Update 3.0 Event Banner", Region = "Inazuma", ImageName = "kokomi.png" });
-            model.AddLast(new Character { Name = "Mona", Vision = "Hydro", Weapon = "Catalyst", LastSeen = "Standard Banner", Region = "Mondstadt", ImageName = "mona.png" });
-            model.AddLast(new Character { Name = "Nilou", Vision = "Hydro", Weapon = "Sword", LastSeen = "Avaliable Now", Region = "Sumeru", ImageName = "nilou.png" });
-            model.AddLast(new Character { Name = "Qiqi", Vision = "Cryo", Weapon = "Sword", LastSeen = "Standard Banner", Region = "Liyue", ImageName = "qiqi.png" });
-            model.AddLast(new Character { Name = "Raiden", Vision = "Electro", Weapon = "Polearm", LastSeen = "Update 2.5 Event Banner", Region = "Inazuma", ImageName = "raiden.png" });
-            model.AddLast(new Character { Name = "Shenhe", Vision = "Cryo", Weapon = "Polearm", LastSeen = "Update 2.4 Event Banner", Region = "Liyue", ImageName = "shenhe.png" });
-            model.AddLast(new Character { Name = "Tartaglia", Vision = "Hydro", Weapon = "Bow", LastSeen = "Update 2.2 Event Banner", Region = "Snezhnaya", ImageName = "tartaglia.png" });
-            model.AddLast(new Character { Name = "Tighnari", Vision = "Dendro", Weapon = "Bow", LastSeen = "Standard Banner", Region = "Sumeru", ImageName = "tighnari.png" });
-            model.AddLast(new Character { Name = "Venti", Vision = "Anemo", Weapon = "Bow", LastSeen = "Update 3.1 Event Banner", Region = "Mondstadt", ImageName = "venti.png" });
-            model.AddLast(new Character { Name = "Xiao", Vision = "Anemo", Weapon = "Polearm", LastSeen = "Update 2.7 Event Banner", Region = "Liyue", ImageName = "xiao.png" });
-            model.AddLast(new Character { Name = "Yae Miko", Vision = "Electro", Weapon = "Catalyst", LastSeen = "Update 2.5 Event Banner", Region = "Inazuma", ImageName = "yaemiko.png" });
-            model.AddLast(new Character { Name = "Yoimiya", Vision = "Pyro", Weapon = "Bow", LastSeen = "Update 2.8 Event Banner", Region = "Inazuma", ImageName = "yoimiya.png" });
-            model.AddLast(new Character { Name = "Zhongli", Vision = "Geo", Weapon = "Polearm", LastSeen = "Update 3.0 Event Banner", Region = "Liyue", ImageName = "zhongli.png" });
-            return View(model);
+            model.AddLast(albedo);
+            model.AddLast(aloy);
+            model.AddLast(ayaka);
+            model.AddLast(ayato);
+            model.AddLast(cyno);
+            model.AddLast(diluc);
+            model.AddLast(eula);
+            model.AddLast(ganyu);
+            model.AddLast(hutao);
+            model.AddLast(itto);
+            model.AddLast(jean);
+            model.AddLast(kazuha);
+            model.AddLast(keqing);
+            model.AddLast(klee);
+            model.AddLast(kokomi);
+            model.AddLast(nahida);
+            model.AddLast(mona);
+            model.AddLast(nilou);
+            model.AddLast(qiqi);
+            model.AddLast(raiden);
+            model.AddLast(shenhe);
+            model.AddLast(tartaglia);
+            model.AddLast(tighnari);
+            model.AddLast(venti);
+            model.AddLast(xiao);
+            model.AddLast(yaemiko);
+            model.AddLast(yoimiya);
+            model.AddLast(zhongli);
+
+            //put into global characterList so we can edit later
+            foreach (var item in model)
+            {
+                characterList.AddLast(item);
+            }
+
+            return View(characterList);
         }
         public IActionResult Element()
         {
+
             return View();
         }
+
+        //Create Characters to be Used in the List
+        public Character albedo = new Character("Albedo", "Geo", "Sword", "Update 3.2 Event Banner", "Mondstadt", "albedo.png");
+        public Character aloy = new Character("Aloy", "Cryo", "Bow", "Gift from Developer", "Not from Genshin", "aloy.png");
+        public Character ayaka = new Character("Ayaka", "Cryo", "Sword", "Update 2.6 Event Banner", "Inazuma", "ayaka.png");
+        public Character ayato = new Character("Ayato", "Hydro", "Sword", "Update 2.6 Event Banner", "Inazuma", "ayato.png");
+        public Character cyno = new Character("Cyno", "Electro", "Polearm", "Update 3.1 Event Banner", "Sumeru", "cyno.png");
+        public Character diluc = new Character("Diluc", "Pyro", "Claymore", "Standard Banner", "Mondstadt", "diluc.png");
+        public Character eula = new Character("Eula", "Cryo", "Claymore", "Update 2.3 Event Banner", "Mondstadt", "eula.png");
+        public Character ganyu = new Character("Ganyu", "Cryo", "Bow", "Update 3.0 Event Banner", "Liyue", "ganyu.png");
+        public Character hutao = new Character("Hu Tao", "Pyro", "Polearm", "Update 2.2 Event Banner", "Liyue", "hutao.png");
+        public Character itto = new Character("Itto", "Geo", "Claymore", "Update 2.7 Event Banner", "Inazuma", "itto.png");
+        public Character jean = new Character("Jean", "Anemo", "Sword", "Standard Banner", "Mondstadt", "jean.png");
+        public Character kazuha = new Character("Kazuha", "Anemo", "Sword", "Update 2.8 Event Banner", "Inazuma", "kazuha.png");
+        public Character keqing = new Character("Keqing", "Electro", "Sword", "Standard Banner", "Liyue", "keqing.png");
+        public Character klee = new Character("Klee", "Pyro", "Catalyst", "Update 2.8 Event Banner", "Mondstadt", "klee.png");
+        public Character kokomi = new Character("Kokomi", "Hydro", "Catalyst", "Update 3.0 Event Banner", "Inazuma", "kokomi.png");
+        public Character mona = new Character("Mona", "Hydro", "Catalyst", "Standard Banner", "Mondstadt", "mona.png");
+        public Character nahida = new Character("Nahida", "Dendro", "Catalyst", "Avaliable Now", "Sumeru", "nahida.png");
+        public Character nilou = new Character("Nilou", "Hydro", "Sword", "Update 3.2 Event Banner", "Sumeru", "nilou.png");
+        public Character qiqi = new Character("Qiqi", "Cryo", "Sword", "Standard Banner", "Liyue", "qiqi.png");
+        public Character raiden = new Character("Raiden", "Electro", "Polearm", "Update 2.5 Event Banner", "Inazuma", "raiden.png");
+        public Character shenhe = new Character("Shenhe", "Cryo", "Polearm", "Update 2.4 Event Banner", "Liyue", "shenhe.png");
+        public Character tartaglia = new Character("Tartaglia", "Hydro", "Bow", "Update 2.2 Event Banner", "Snezhnaya", "tartaglia.png");
+        public Character tighnari = new Character("Tighnari", "Dendro", "Bow", "Standard Banner", "Sumeru", "tighnari.png");
+        public Character venti = new Character("Venti", "Anemo", "Bow", "Update 3.1 Event Banner", "Mondstadt", "venti.png");
+        public Character xiao = new Character("Xiao", "Anemo", "Polearm", "Update 2.7 Event Banner", "Liyue", "xiao.png");
+        public Character yaemiko = new Character("Yae Miko", "Electro", "Catalyst", "Update 2.5 Event Banner", "Inazuma", "yaemiko.png");
+        public Character yoimiya = new Character("Yoimiya", "Pyro", "Bow", "Avaliable Now", "Inazuma", "yoimiya.png");
+        public Character zhongli = new Character("Zhongli", "Geo", "Polearm", "Update 3.0 Event Banner", "Liyue", "zhongli.png");
+
     }
 }
