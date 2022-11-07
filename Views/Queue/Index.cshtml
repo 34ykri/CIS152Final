@@ -1,10 +1,13 @@
-﻿@{
+﻿@model Queue<Character>
+@{
     ViewData["Title"] = "Queue";
 }
 
 <div class="text-center">
     <h1 class="display-4">Priority Queue Creator</h1>
 </div>
+<a asp-controller="Queue" asp-action="Add"><b>Enqueue Character</b></a>
+
 <table class="table table-bordered table-striped">
     <thead>
         <tr>
@@ -17,4 +20,16 @@
             <th>Region</th>
         </tr>
     </thead>
+    @foreach (var character in Model)
+    {
+        <tr>
+            <td>@character.Priority</td>
+            <td><img src="~/images/@character.ImageName" width="100" height="100" alt="Picture of @character.Name" title="Picture of @character.Name" /></td>
+            <td>@character.Name</td>
+            <td>@character.Vision</td>
+            <td>@character.Weapon</td>
+            <td>@character.LastSeen</td>
+            <td>@character.Region</td>
+        </tr>
+    }
 </table>

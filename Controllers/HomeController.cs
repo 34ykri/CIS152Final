@@ -7,7 +7,7 @@ namespace DataStructuresFinalProjectWebAppVang.Controllers
     public class HomeController : Controller
     {
         LinkedList<Character> characterList = new LinkedList<Character>();
-        public IActionResult Index()
+        public ViewResult Index(string id = "all")
         {
             var model = new LinkedList<Character>();
             model.AddLast(albedo);
@@ -39,20 +39,26 @@ namespace DataStructuresFinalProjectWebAppVang.Controllers
             model.AddLast(yoimiya);
             model.AddLast(zhongli);
 
-            //put into global characterList so we can edit later
-            foreach (var item in model)
-            {
-                characterList.AddLast(item);
+            if(id != "all") { 
+                foreach (var character in model)
+                {
+                    if (id == character.Vision)
+                    {
+                        characterList.AddLast(character);
+                    }
+                    else if (id == character.Weapon)
+                    {
+                        characterList.AddLast(character);
+                    }
+                    else if (id == character.Region)
+                    {
+                        characterList.AddLast(character);
+                    }
+                }
+                return View(characterList);
             }
-
-            return View(characterList);
+            return View(model);
         }
-        public IActionResult Element()
-        {
-
-            return View();
-        }
-
         //Create Characters to be Used in the List
         public Character albedo = new Character("Albedo", "Geo", "Sword", "Update 3.2 Event Banner", "Mondstadt", "albedo.png");
         public Character aloy = new Character("Aloy", "Cryo", "Bow", "Gift from Developer", "Not from Genshin", "aloy.png");

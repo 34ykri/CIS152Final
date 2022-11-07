@@ -15,8 +15,8 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\thefo\Source\Repos\CIS152Final
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/thefo/Source/Repos/CIS152Final/Views/Home/Anemo.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBbmVtby5jc2h0bWw=
+[C:/Users/thefo/Source/Repos/CIS152Final/Views/Home/Element.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFbGVtZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/thefo/Source/Repos/CIS152Final/Views/Home/Index.cshtml]

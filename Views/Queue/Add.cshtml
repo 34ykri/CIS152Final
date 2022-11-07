@@ -1,8 +1,28 @@
-﻿@{
+﻿@model Character
+@{
     ViewData["Title"] = "Add To Queue";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Priority Queue Creator</h1>
+    <h1 class="display-4">Add to Priority Queue</h1>
 </div>
-<table class="table table-bordered table-striped">
+<form asp-action="Add" method="post">
+    <div class="form-group">
+        <label asp-for="Name">Character:</label>
+        <select asp-for="Name" class="form-control input-validation-error"
+                asp-items="@(new SelectList(ViewBag.Characters,"Id" ,"Name"))">
+            <option value=""></option>
+        </select>
+    </div>
+
+    <div class="col-sm-6">
+        <label asp-for="Priority">Priority:</label>
+        <span asp-validation-for="Priority" class="text-danger"></span>
+        <input type="text" asp-for="Priority" class="form-control input-validation-error">
+    </div>
+
+    <div class ="col-sm-6">
+    <button type="submit" class="btn btn-primary">Enqueue</button>
+    <a asp-action="Index" class="btn btn-primary">Cancel</a>
+    </div>
+</form>

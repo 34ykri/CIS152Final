@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,7 +18,10 @@ namespace DataStructuresFinalProjectWebAppVang.Models
         public string LastSeen { get; set; }
         public string Region { get; set; }
         public string ImageName { get; set; }
+        [Required(ErrorMessage = "Enter a Priority")]
+        [Range(1,5, ErrorMessage = "Must be 1-5")]
         public int? Priority { get; set; }
+        public string ActiveFilter { get; set; }
         public LinkedList<Character> CharacterList { get; set; }
         public Character()
         {
@@ -47,5 +51,5 @@ namespace DataStructuresFinalProjectWebAppVang.Models
             this.ImageName = imgname;
 
         }
-  }
+    }
 }
