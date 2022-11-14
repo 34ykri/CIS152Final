@@ -8,10 +8,11 @@
 </div>
 <form asp-action="Add" method="post">
     <div class="form-group">
-        <label asp-for="Name">Character:</label>
-        <select asp-for="Name" class="form-control input-validation-error"
-                asp-items="@(new SelectList(ViewBag.Characters,"Id" ,"Name"))">
-            <option value=""></option>
+        <label asp-for="SelectChar">Character:</label>
+        <span asp-validation-for="SelectChar" class="text-danger"></span>
+        <select asp-for="SelectChar" class="form-control input-validation-error"
+                asp-items="@(new SelectList(ViewBag.Characters, "Name", "Name"))">
+            <option value=""/>
         </select>
     </div>
 

@@ -10,11 +10,25 @@ namespace DataStructuresFinalProjectWebAppVang.Controllers
         Queue<Character> queue = new Queue<Character>();
         public IActionResult Index()
         {
-            var model = queue;
-            return View(model);
+            if(queue.Count != 0)
+            {
+                foreach(var character in queue)
+                {
+                    queue.Enqueue(character);
+                }
+            }
+            queue.OrderBy(c => c.Priority);
+            return View("Index", queue);
         }
         public IActionResult Add()
         {
+            if (queue.Count != 0)
+            {
+                foreach (var character in queue)
+                {
+                    queue.Enqueue(character);
+                }
+            }
             var model = new LinkedList<Character>();
             model.AddLast(albedo);
             model.AddLast(aloy);
@@ -49,14 +63,79 @@ namespace DataStructuresFinalProjectWebAppVang.Controllers
             {
                 ViewBag.Characters.AddLast(item);
             }
-
-            return View();
+            if (queue.Count == 0)
+            {
+                return View();
+            } 
+            else
+            {
+                return View(queue);
+            }
         }
         [HttpPost]
-        public IActionResult Add(Character name, int priority)
+        public IActionResult Add(Character character)
         {
-            return RedirectToAction("Index");
+            var model = new LinkedList<Character>();
+            model.AddLast(albedo);
+            model.AddLast(aloy);
+            model.AddLast(ayaka);
+            model.AddLast(ayato);
+            model.AddLast(cyno);
+            model.AddLast(diluc);
+            model.AddLast(eula);
+            model.AddLast(ganyu);
+            model.AddLast(hutao);
+            model.AddLast(itto);
+            model.AddLast(jean);
+            model.AddLast(kazuha);
+            model.AddLast(keqing);
+            model.AddLast(klee);
+            model.AddLast(kokomi);
+            model.AddLast(nahida);
+            model.AddLast(mona);
+            model.AddLast(nilou);
+            model.AddLast(qiqi);
+            model.AddLast(raiden);
+            model.AddLast(shenhe);
+            model.AddLast(tartaglia);
+            model.AddLast(tighnari);
+            model.AddLast(venti);
+            model.AddLast(xiao);
+            model.AddLast(yaemiko);
+            model.AddLast(yoimiya);
+            model.AddLast(zhongli);
+            int? priority = character.Priority;
+            if(queue.Count != 0)
+            {
+                foreach(var item in queue)
+                {
+                    queue.Enqueue(item);
+                }
+            }
+            foreach (var item in model)
+            {
+                if (character.SelectChar == item.Name)
+                {
+                    character = item;
+                    character.Priority = priority;
+                }
+            }
+            if (character.Name == "NPC")
+            {
+                ViewBag.Characters = new LinkedList<Character>();
+                foreach (var item in model)
+                {
+                    ViewBag.Characters.AddLast(item);
+                }
+                return View(character);
+            }
+            else
+            {
+                queue.Enqueue(character);
+                return View("Index", queue);
+            }
         }
+
         //Create Characters to be Used in the List
         public Character albedo = new Character("Albedo", "Geo", "Sword", "Update 3.2 Event Banner", "Mondstadt", "albedo.png");
         public Character aloy = new Character("Aloy", "Cryo", "Bow", "Gift from Developer", "Not from Genshin", "aloy.png");

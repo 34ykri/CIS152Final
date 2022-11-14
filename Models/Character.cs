@@ -21,6 +21,8 @@ namespace DataStructuresFinalProjectWebAppVang.Models
         [Required(ErrorMessage = "Enter a Priority")]
         [Range(1,5, ErrorMessage = "Must be 1-5")]
         public int? Priority { get; set; }
+        [Required(ErrorMessage = "Select a Character")]
+        public string SelectChar { get; set; }
         public string ActiveFilter { get; set; }
         public LinkedList<Character> CharacterList { get; set; }
         public Character()
