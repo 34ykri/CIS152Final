@@ -8,7 +8,6 @@ namespace DataStructuresFinalProjectWebAppVang.Controllers
     {
         private static Queue<Character> queue = new Queue<Character>();
         private static LinkedList<Character> sortChar = new LinkedList<Character>();
-
         public IActionResult Index(string id)
         {
             if (queue.Count != 0)
