@@ -6,29 +6,28 @@ namespace DataStructuresFinalProjectWebAppVang.Controllers
 {
     public class QueueController : Controller
     {
-        PriorityQueue<Character, int> priorityQueue = new PriorityQueue<Character, int>();
-        Queue<Character> queue = new Queue<Character>();
-        public IActionResult Index()
-        {
-            if(queue.Count != 0)
-            {
-                foreach(var character in queue)
-                {
-                    queue.Enqueue(character);
-                }
-            }
-            queue.OrderBy(c => c.Priority);
-            return View("Index", queue);
-        }
-        public IActionResult Add()
+        private static Queue<Character> queue = new Queue<Character>();
+        private static PriorityQueue<Character,int?> pQueue = new PriorityQueue<Character, int?>();
+        private static LinkedList<Character> sortChar = new LinkedList<Character>();
+
+        public IActionResult Index(string id)
         {
             if (queue.Count != 0)
             {
-                foreach (var character in queue)
+                if (id == "Dequeue")
                 {
-                    queue.Enqueue(character);
+                    Character topChar = queue.First();
+                    queue.Dequeue();
+                    sortChar.Remove(topChar);
+
+                    return View(queue);
                 }
             }
+            return View(queue);
+        }
+        
+        public IActionResult Add()
+        {
             var model = new LinkedList<Character>();
             model.AddLast(albedo);
             model.AddLast(aloy);
@@ -63,14 +62,7 @@ namespace DataStructuresFinalProjectWebAppVang.Controllers
             {
                 ViewBag.Characters.AddLast(item);
             }
-            if (queue.Count == 0)
-            {
-                return View();
-            } 
-            else
-            {
-                return View(queue);
-            }
+            return View();
         }
         [HttpPost]
         public IActionResult Add(Character character)
@@ -105,13 +97,6 @@ namespace DataStructuresFinalProjectWebAppVang.Controllers
             model.AddLast(yoimiya);
             model.AddLast(zhongli);
             int? priority = character.Priority;
-            if(queue.Count != 0)
-            {
-                foreach(var item in queue)
-                {
-                    queue.Enqueue(item);
-                }
-            }
             foreach (var item in model)
             {
                 if (character.SelectChar == item.Name)
@@ -120,7 +105,7 @@ namespace DataStructuresFinalProjectWebAppVang.Controllers
                     character.Priority = priority;
                 }
             }
-            if (character.Name == "NPC")
+            if (character.Name == "NPC" || character.Priority == null || (character.Priority > 5 || character.Priority < 1))
             {
                 ViewBag.Characters = new LinkedList<Character>();
                 foreach (var item in model)
@@ -132,6 +117,16 @@ namespace DataStructuresFinalProjectWebAppVang.Controllers
             else
             {
                 queue.Enqueue(character);
+                sortChar.AddLast(character);
+                if(queue.Count != 0)
+                {
+                    queue.Clear();
+                    IEnumerable<Character> sortedCharacters = sortChar.OrderBy(c => c.Priority);
+                    foreach (Character sortChar in sortedCharacters)
+                    {
+                        queue.Enqueue(sortChar);
+                    }
+                }
                 return View("Index", queue);
             }
         }

@@ -3,16 +3,24 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - DataStructuresFinalProjectWebAppVang</title>
+    <title>@ViewData["Title"] - Genshin Impact Viewer</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/DataStructuresFinalProjectWebAppVang.styles.css" asp-append-version="true" />
+    <style>
+        .dequeue {
+            color: red;
+        }
+        .enqueue {
+            color: green;
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" id="top" asp-area="" asp-page="/Index" asp-route-id="all">Genshin Impact Viewer</a>
+                <a class="navbar-brand" id="top" asp-area="" asp-controller="Home" asp-action="Index" asp-route-id="all">Genshin Impact Viewer</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -38,7 +46,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - DataStructuresFinalProjectWebAppVang - <a href="#top">Back To Top</a>
+            &copy; 2022 - Genshin Impact Viewer App - Alex Vang - <a href="#top">Back To Top</a>
         </div>
     </footer>
 

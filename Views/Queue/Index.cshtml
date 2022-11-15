@@ -4,10 +4,12 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Priority Queue Creator</h1>
+    <h1 class="display-6">Queue Creator</h1>
 </div>
-<a asp-controller="Queue" asp-action="Add"><b>Enqueue Character</b></a>
-
+<a asp-controller="Queue" asp-action="Add" class="enqueue"><b>Enqueue Character</b></a>
+<div style="float: right;">
+<a asp-controller="Queue" asp-action="Index" asp-route-id="Dequeue" class="dequeue"><b>Dequeue Character</b></a>
+</div>
 <table class="table table-bordered table-striped">
     <thead>
         <tr>

@@ -18,7 +18,7 @@ namespace DataStructuresFinalProjectWebAppVang.Models
         public string LastSeen { get; set; }
         public string Region { get; set; }
         public string ImageName { get; set; }
-        [Required(ErrorMessage = "Enter a Priority")]
+        [Required(ErrorMessage = "Enter a Priority (1-5)")]
         [Range(1,5, ErrorMessage = "Must be 1-5")]
         public int? Priority { get; set; }
         [Required(ErrorMessage = "Select a Character")]
