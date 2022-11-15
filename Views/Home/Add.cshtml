@@ -12,7 +12,7 @@
         <span asp-validation-for="SelectChar" class="text-danger"></span>
         <select asp-for="SelectChar" class="form-control input-validation-error"
                 asp-items="@(new SelectList(ViewBag.Characters, "Name", "Name"))">
-            <option value=""/>
+            <option value="" />
         </select>
     </div>
 
@@ -22,8 +22,8 @@
         <input type="text" asp-for="Priority" class="form-control input-validation-error">
     </div>
 
-    <div class ="col-sm-6">
-    <button type="submit" class="btn btn-primary">Enqueue</button>
-    <a asp-action="Index" class="btn btn-primary">Cancel</a>
+    <div class="col-sm-6">
+        <button type="submit" class="btn btn-primary">Enqueue</button>
+        <a asp-action="Queue" class="btn btn-primary">Cancel</a>
     </div>
 </form>

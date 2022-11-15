@@ -6,9 +6,18 @@ namespace DataStructuresFinalProjectWebAppVang.Controllers
 {
     public class HomeController : Controller
     {
-        LinkedList<Character> characterList = new LinkedList<Character>();
-        public ViewResult Index(string id = "all")
+        //Static list to hold every character in all characters list
+        private static LinkedList<Character> allCharacters = new LinkedList<Character>();
+        private LinkedList<Character> characterList = new LinkedList<Character>();
+        //Static queue to keep added characters in queue
+        private static Queue<Character> queue = new Queue<Character>();
+        //Static linked list to sort characters by priority
+        private static LinkedList<Character> sortChar = new LinkedList<Character>();
+
+        //Default id is all to get every character
+        public IActionResult Index(string id = "all")
         {
+            //Add characters to model
             var model = new LinkedList<Character>();
             model.AddLast(albedo);
             model.AddLast(aloy);
@@ -39,7 +48,18 @@ namespace DataStructuresFinalProjectWebAppVang.Controllers
             model.AddLast(yoimiya);
             model.AddLast(zhongli);
 
-            if(id != "all") { 
+            //Add every character in model to the static allCharacters list to reuse in other functions
+            foreach (var item in model)
+            {
+                allCharacters.AddLast(item);
+            }
+
+            //Insertion sort 
+            if (id != "all")
+            {
+                //When Id is not all
+                //Foreach character in the model, if the id matches the vision/weapon/region insert it into the character list
+                //and return the sorted view
                 foreach (var character in model)
                 {
                     if (id == character.Vision)
@@ -57,9 +77,95 @@ namespace DataStructuresFinalProjectWebAppVang.Controllers
                 }
                 return View(characterList);
             }
+            //Otherwise return model with all characters
             return View(model);
         }
+        //Queue page
+        //Takes a parameter called id
+        public IActionResult Queue(string id)
+        {
+            //If the queue is not empty
+            if (queue.Count != 0)
+            {
+                //and if id equals Dequeue
+                if (id == "Dequeue")
+                {
+                    //assign the character at the top of the queue to topChar
+                    Character topChar = queue.First();
+                    //Dequeue the character at the top of the queue
+                    queue.Dequeue();
+                    //Also remove it from the sorted queue LinkedList
+                    sortChar.Remove(topChar);
+                    //Return the queue back to user
+                    return View(queue);
+                }
+            }
+            //Otherwise return the queue
+            return View(queue);
+        }
+
+        [HttpGet]
+        //Default page for Add to put every character into a ViewBag
+        //When in the ViewBag it uses a SelectList so you can select characters
+        public IActionResult Add()
+        {
+            //Model is equal to static allCharacters List to retrieve the characters
+            var model = allCharacters;
+            ViewBag.Characters = allCharacters;
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Add(Character character)
+        {
+            //Model is equal to static allCharacters List to retrieve the characters
+            var model = allCharacters;
+            //When priority is entered it is stored into an int
+            int? priority = character.Priority;
+            //Foreach to find character to add to queue
+            foreach (var item in model)
+            {
+                //If the Selected Characters name is equal to the character in the model
+                if (character.SelectChar == item.Name)
+                {
+                    //Assign character to that item and priority
+                    character = item;
+                    character.Priority = priority;
+                }
+            }
+            //If the data is invalid give an error and return the SelectList
+            if (character.Name == "NPC" || character.Priority == null || (character.Priority > 5 || character.Priority < 1))
+            {
+                ViewBag.Characters = new LinkedList<Character>();
+                foreach (var item in model)
+                {
+                    ViewBag.Characters.AddLast(item);
+                }
+                return View(character);
+            }
+            //Otherwise data is valid add the character to the queue and the LinkedList to be sorted
+            else
+            {
+                queue.Enqueue(character);
+                sortChar.AddLast(character);
+                //If the queue is not empty
+                if (queue.Count != 0)
+                {
+                    //Clear the queue
+                    queue.Clear();
+                    //IEnumerable to sort the queue by Priority
+                    IEnumerable<Character> sortedCharacters = sortChar.OrderBy(c => c.Priority);
+                    //Once sorted foreach character in the sorted list add it back to the queue
+                    foreach (Character sortChar in sortedCharacters)
+                    {
+                        queue.Enqueue(sortChar);
+                    }
+                }
+                //Return queue
+                return View("Queue", queue);
+            }
+        }
         //Create Characters to be Used in the List
+        //Character(Name,Vision,Weapon,Last Seen, Region, Image Name)
         public Character albedo = new Character("Albedo", "Geo", "Sword", "Update 3.2 Event Banner", "Mondstadt", "albedo.png");
         public Character aloy = new Character("Aloy", "Cryo", "Bow", "Gift from Developer", "Not from Genshin", "aloy.png");
         public Character ayaka = new Character("Ayaka", "Cryo", "Sword", "Update 2.6 Event Banner", "Inazuma", "ayaka.png");
