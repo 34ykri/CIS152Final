@@ -7,7 +7,6 @@ namespace DataStructuresFinalProjectWebAppVang.Controllers
     public class QueueController : Controller
     {
         private static Queue<Character> queue = new Queue<Character>();
-        private static PriorityQueue<Character,int?> pQueue = new PriorityQueue<Character, int?>();
         private static LinkedList<Character> sortChar = new LinkedList<Character>();
 
         public IActionResult Index(string id)
