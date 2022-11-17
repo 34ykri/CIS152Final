@@ -19,8 +19,15 @@
     <div class="col-sm-6">
         <label asp-for="Priority">Priority:</label>
         <span asp-validation-for="Priority" class="text-danger"></span>
-        <input type="text" asp-for="Priority" class="form-control input-validation-error">
-    </div>
+        <select class="form-control input-validation-error" id="Priority" name="Priority" asp-for="Priority">
+            <option></option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+     </div>
 
     <div class="col-sm-6">
         <button type="submit" class="btn btn-primary">Enqueue</button>

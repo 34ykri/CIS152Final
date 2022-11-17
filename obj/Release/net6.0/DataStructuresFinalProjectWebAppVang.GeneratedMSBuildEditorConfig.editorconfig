@@ -15,16 +15,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\thefo\Source\Repos\CIS152Final
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/thefo/Source/Repos/CIS152Final/Views/Home/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/thefo/Source/Repos/CIS152Final/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thefo/Source/Repos/CIS152Final/Views/Queue/Add.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVldWVcQWRkLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/thefo/Source/Repos/CIS152Final/Views/Queue/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVldWVcSW5kZXguY3NodG1s
+[C:/Users/thefo/Source/Repos/CIS152Final/Views/Home/Queue.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxRdWV1ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/thefo/Source/Repos/CIS152Final/Views/Shared/_ValidationScriptsPartial.cshtml]
