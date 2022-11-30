@@ -18,6 +18,7 @@ namespace DataStructuresFinalProjectWebAppVang.Models
         public string LastSeen { get; set; }
         public string Region { get; set; }
         public string ImageName { get; set; }
+        //Priority to use with Queue
         [Required(ErrorMessage = "Enter a Priority (1-5)")]
         [Range(1,5, ErrorMessage = "Must be 1-5")]
         public int? Priority { get; set; }
@@ -25,6 +26,7 @@ namespace DataStructuresFinalProjectWebAppVang.Models
         public string SelectChar { get; set; }
         public string ActiveFilter { get; set; }
         public LinkedList<Character> CharacterList { get; set; }
+        //Default Constructor
         public Character()
         {
             this.Name = "NPC";
@@ -34,6 +36,7 @@ namespace DataStructuresFinalProjectWebAppVang.Models
             this.Region = "Teyvat";
             this.ImageName = "NPC.png";
         }
+        //Constructor with Parameters
         public Character(string name, string vision, string weapon, string lastSeen, string region)
         {
             this.Name = name;
@@ -43,6 +46,7 @@ namespace DataStructuresFinalProjectWebAppVang.Models
             this.Region = region;
         }
 
+        //Constructor with Parameters with ImageName parameter to display photo
         public Character(string name, string vision, string weapon, string lastSeen, string region, string imgname)
         {
             this.Name = name;
