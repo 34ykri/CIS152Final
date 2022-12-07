@@ -191,7 +191,7 @@ namespace DataStructuresFinalProjectWebAppVang.Controllers
         public Character tartaglia = new Character("Tartaglia", "Hydro", "Bow", "Update 3.2 Event Banner", "Snezhnaya", "tartaglia.png");
         public Character tighnari = new Character("Tighnari", "Dendro", "Bow", "Standard Banner", "Sumeru", "tighnari.png");
         public Character venti = new Character("Venti", "Anemo", "Bow", "Update 3.1 Event Banner", "Mondstadt", "venti.png");
-        public Character wanderer = new Character("Wanderer", "Anemo", "Catalyst", "Available Now", "Inazuma", "wandererc.png");
+        public Character wanderer = new Character("Wanderer", "Anemo", "Catalyst", "Available Now", "Inazuma", "wanderer.png");
         public Character xiao = new Character("Xiao", "Anemo", "Polearm", "Update 2.7 Event Banner", "Liyue", "xiao.png");
         public Character yaemiko = new Character("Yae Miko", "Electro", "Catalyst", "Update 3.2 Event Banner", "Inazuma", "yaemiko.png");
         public Character yoimiya = new Character("Yoimiya", "Pyro", "Bow", "Update 3.2 Event Banner", "Inazuma", "yoimiya.png");
