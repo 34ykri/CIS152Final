@@ -43,6 +43,7 @@ namespace DataStructuresFinalProjectWebAppVang.Controllers
             model.AddLast(tartaglia);
             model.AddLast(tighnari);
             model.AddLast(venti);
+            model.AddLast(wanderer);
             model.AddLast(xiao);
             model.AddLast(yaemiko);
             model.AddLast(yoimiya);
@@ -175,7 +176,7 @@ namespace DataStructuresFinalProjectWebAppVang.Controllers
         public Character eula = new Character("Eula", "Cryo", "Claymore", "Update 2.3 Event Banner", "Mondstadt", "eula.png");
         public Character ganyu = new Character("Ganyu", "Cryo", "Bow", "Update 3.0 Event Banner", "Liyue", "ganyu.png");
         public Character hutao = new Character("Hu Tao", "Pyro", "Polearm", "Update 2.2 Event Banner", "Liyue", "hutao.png");
-        public Character itto = new Character("Itto", "Geo", "Claymore", "Update 2.7 Event Banner", "Inazuma", "itto.png");
+        public Character itto = new Character("Itto", "Geo", "Claymore", "Available Now", "Inazuma", "itto.png");
         public Character jean = new Character("Jean", "Anemo", "Sword", "Standard Banner", "Mondstadt", "jean.png");
         public Character kazuha = new Character("Kazuha", "Anemo", "Sword", "Update 2.8 Event Banner", "Inazuma", "kazuha.png");
         public Character keqing = new Character("Keqing", "Electro", "Sword", "Standard Banner", "Liyue", "keqing.png");
@@ -187,11 +188,12 @@ namespace DataStructuresFinalProjectWebAppVang.Controllers
         public Character qiqi = new Character("Qiqi", "Cryo", "Sword", "Standard Banner", "Liyue", "qiqi.png");
         public Character raiden = new Character("Raiden", "Electro", "Polearm", "Update 2.5 Event Banner", "Inazuma", "raiden.png");
         public Character shenhe = new Character("Shenhe", "Cryo", "Polearm", "Update 2.4 Event Banner", "Liyue", "shenhe.png");
-        public Character tartaglia = new Character("Tartaglia", "Hydro", "Bow", "Avaliable Now", "Snezhnaya", "tartaglia.png");
+        public Character tartaglia = new Character("Tartaglia", "Hydro", "Bow", "Update 3.2 Event Banner", "Snezhnaya", "tartaglia.png");
         public Character tighnari = new Character("Tighnari", "Dendro", "Bow", "Standard Banner", "Sumeru", "tighnari.png");
         public Character venti = new Character("Venti", "Anemo", "Bow", "Update 3.1 Event Banner", "Mondstadt", "venti.png");
+        public Character wanderer = new Character("Wanderer", "Anemo", "Catalyst", "Available Now", "Inazuma", "wandererc.png");
         public Character xiao = new Character("Xiao", "Anemo", "Polearm", "Update 2.7 Event Banner", "Liyue", "xiao.png");
-        public Character yaemiko = new Character("Yae Miko", "Electro", "Catalyst", "Avaliable Now", "Inazuma", "yaemiko.png");
+        public Character yaemiko = new Character("Yae Miko", "Electro", "Catalyst", "Update 3.2 Event Banner", "Inazuma", "yaemiko.png");
         public Character yoimiya = new Character("Yoimiya", "Pyro", "Bow", "Update 3.2 Event Banner", "Inazuma", "yoimiya.png");
         public Character zhongli = new Character("Zhongli", "Geo", "Polearm", "Update 3.0 Event Banner", "Liyue", "zhongli.png");
 

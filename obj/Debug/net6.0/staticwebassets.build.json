@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ME/NFAVPbDWZLuIF7Qp3m0L91wLoTCtKArT3ljtn2yM=",
+  "Hash": "lqkvH72NCip3IUcbEy85HDHfEyUL/MA0OrpQxmAjQi0=",
   "Source": "DataStructuresFinalProjectWebAppVang",
   "BasePath": "_content/DataStructuresFinalProjectWebAppVang",
   "Mode": "Default",
@@ -491,6 +491,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\venti.png"
+    },
+    {
+      "Identity": "C:\\Users\\thefo\\Source\\Repos\\CIS152Final\\wwwroot\\images\\wanderer.png",
+      "SourceId": "DataStructuresFinalProjectWebAppVang",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\thefo\\Source\\Repos\\CIS152Final\\wwwroot\\",
+      "BasePath": "_content/DataStructuresFinalProjectWebAppVang",
+      "RelativePath": "images/wanderer.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\wanderer.png"
     },
     {
       "Identity": "C:\\Users\\thefo\\Source\\Repos\\CIS152Final\\wwwroot\\images\\xiao.png",
